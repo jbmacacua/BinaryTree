@@ -61,6 +61,17 @@ class BinarySearchTreeNode:
 
         return elements
 
+#======================Exercise Number 5 P1========================
+
+    def pre_order_traversal(self):
+        elements = [self.data]
+        if self.left:
+            elements += self.left.pre_order_traversal()
+        if self.right:
+            elements += self.right.pre_order_traversal()
+
+        return elements
+
 #======================Exercise Number 1 P1========================
 
     def find_min(self):
@@ -82,7 +93,7 @@ class BinarySearchTreeNode:
         right_sum = self.right.calculate_sum() if self.right else 0
         return self.data + left_sum + right_sum
 
-#======================Exercise Number 3 P1========================
+#==================================================================
 
 def build_tree(elements):
     print("Building tree with these elements:",elements)
@@ -103,6 +114,7 @@ if __name__ == '__main__':
     numbers_tree = build_tree([17, 4, 1, 20, 9, 23, 18, 34])
     print("In order traversal gives this sorted list:",numbers_tree.in_order_traversal())
 
+#--------------------------------------------------------------
     #Binary tree using the letters of my name
 
     my_name = ["J", "O", "N", "A", "S",
@@ -112,3 +124,4 @@ if __name__ == '__main__':
     name_tree = build_tree(my_name)
     print("Is letter J in my name? : ", name_tree.search("J"))
     print("Is letter Q in my name? : ", name_tree.search("Q"))
+#--------------------------------------------------------------
