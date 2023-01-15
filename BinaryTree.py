@@ -48,6 +48,17 @@ class BinarySearchTreeNode:
 
         return elements
 
+#======================Exercise Number 1===========================
+
+    def find_min(self):
+        if self.left is None:
+            return self.data
+        return self.left.find_min()
+
+#==================================================================
+
+
+
 def build_tree(elements):
     print("Building tree with these elements:",elements)
     root = BinarySearchTreeNode(elements[0])
