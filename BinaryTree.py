@@ -125,3 +125,12 @@ if __name__ == '__main__':
     print("Is letter J in my name? : ", name_tree.search("J"))
     print("Is letter Q in my name? : ", name_tree.search("Q"))
 #--------------------------------------------------------------
+
+#*************Print Area for the Exercise part 1**************
+
+    print("Min:",numbers_tree.find_min())
+    print("Max:",numbers_tree.find_max())
+    print("Sum:", numbers_tree.calculate_sum())
+    print("In order traversal:", numbers_tree.in_order_traversal())
+    print("Pre order traversal:", numbers_tree.pre_order_traversal())
+    print("Post order traversal:", numbers_tree.post_order_traversal())
