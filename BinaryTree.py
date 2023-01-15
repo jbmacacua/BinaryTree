@@ -48,23 +48,29 @@ class BinarySearchTreeNode:
 
         return elements
 
-#======================Exercise Number 1 P1===========================
+#======================Exercise Number 1 P1========================
 
     def find_min(self):
         if self.left is None:
             return self.data
         return self.left.find_min()
 
-#==================================================================
-
-#======================Exercise Number 2 P1===========================
+#======================Exercise Number 2 P1========================
 
     def find_max(self):
         if self.right is None:
             return self.data
         return self.right.find_max()
 
-#==================================================================
+#======================Exercise Number 3 P1========================
+
+    def calculate_sum(self):
+        left_sum = self.left.calculate_sum() if self.left else 0
+        right_sum = self.right.calculate_sum() if self.right else 0
+        return self.data + left_sum + right_sum
+
+#======================Exercise Number 3 P1========================
+
 def build_tree(elements):
     print("Building tree with these elements:",elements)
     root = BinarySearchTreeNode(elements[0])
