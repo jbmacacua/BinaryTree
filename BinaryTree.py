@@ -1,3 +1,5 @@
+print("\n============  Introduction to Binary Tree with Exercises  ============")
+print("************************************************************************\n")
 class BinarySearchTreeNode:
     def __init__(self, data):
         self.data = data
@@ -107,16 +109,17 @@ def build_tree(elements):
 if __name__ == '__main__':
     countries = ["India", "Pakistan", "Germany", "USA", "China", "India", "UK", "USA"]
     country_tree = build_tree(countries)
-
+    print("-------------------------------------------")
     print("UK is in the list? ", country_tree.search("UK"))
     print("Sweden is in the list? ", country_tree.search("Sweden"))
+    print("-------------------------------------------\n")
 
     numbers_tree = build_tree([17, 4, 1, 20, 9, 23, 18, 34])
     print("In order traversal gives this sorted list:",numbers_tree.in_order_traversal())
 
 #--------------------------------------------------------------
     #Binary tree using the letters of my name
-
+    print("_________________________________________________________________________\n")
     my_name = ["J", "O", "N", "A", "S",
                "B", "R", "I", "A", "N",
                "R",
@@ -124,9 +127,12 @@ if __name__ == '__main__':
     name_tree = build_tree(my_name)
     print("Is letter J in my name? : ", name_tree.search("J"))
     print("Is letter Q in my name? : ", name_tree.search("Q"))
+    print("_________________________________________________________________________\n")
+
 #--------------------------------------------------------------
 
 #*************Print Area for the Exercise part 1**************
+    print("                <=== Exercises Output ===>\n")
 
     print("Min:",numbers_tree.find_min())
     print("Max:",numbers_tree.find_max())
