@@ -66,3 +66,13 @@ if __name__ == '__main__':
 
     numbers_tree = build_tree([17, 4, 1, 20, 9, 23, 18, 34])
     print("In order traversal gives this sorted list:",numbers_tree.in_order_traversal())
+
+    #Binary tree using the letters of my name
+
+    my_name = ["J", "O", "N", "A", "S",
+               "B", "R", "I", "A", "N",
+               "R",
+               "M", "A", "C", "A", "C", "U", "A"]
+    name_tree = build_tree(my_name)
+    print("Is letter J in my name? : ", name_tree.search("J"))
+    print("Is letter Q in my name? : ", name_tree.search("Q"))
