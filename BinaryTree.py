@@ -69,9 +69,9 @@ class BinarySearchTreeNode:
             self.data = min_val
             self.right = self.right.delete(min_val)
 
-        return
+        return self
 
-    #======================Exercise Number 4 P1========================
+#======================Exercise Number 4 P1========================
 
     def post_order_traversal(self):
         elements = []
@@ -138,6 +138,10 @@ if __name__ == '__main__':
     numbers_tree = build_tree([17, 4, 1, 20, 9, 23, 18, 34])
     print("In order traversal gives this sorted list:",numbers_tree.in_order_traversal())
 
+    numbers_tree1 = build_tree([2, 5, 9, 23, 88])
+    numbers_tree1.delete(88)
+    print("After deleting 88 ",numbers_tree1.in_order_traversal())
+
 #--------------------------------------------------------------
     #Binary tree using the letters of my name
     print("_________________________________________________________________________\n")
@@ -150,10 +154,15 @@ if __name__ == '__main__':
     print("Is letter Q in my name? : ", name_tree.search("Q"))
     print("_________________________________________________________________________\n")
 
+    numbers_tree1 = build_tree([17, 4, 1, 20, 9, 23, 18, 34])
+    numbers_tree1.delete(9)
+    print("After deleting 9 ", numbers_tree1.in_order_traversal())
+    print("_________________________________________________________________________\n")
+
 #--------------------------------------------------------------
 
 #*************Print Area for the Exercise part 1**************
-    print("                <=== Exercises Output ===>\n")
+    print("                <=== Exercises Output Part 1===>\n")
 
     print("Min:",numbers_tree.find_min())
     print("Max:",numbers_tree.find_max())
