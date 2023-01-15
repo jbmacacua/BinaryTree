@@ -48,7 +48,7 @@ class BinarySearchTreeNode:
 
         return elements
 
-#======================Exercise Number 1===========================
+#======================Exercise Number 1 P1===========================
 
     def find_min(self):
         if self.left is None:
@@ -57,8 +57,14 @@ class BinarySearchTreeNode:
 
 #==================================================================
 
+#======================Exercise Number 2 P1===========================
 
+    def find_max(self):
+        if self.right is None:
+            return self.data
+        return self.right.find_max()
 
+#==================================================================
 def build_tree(elements):
     print("Building tree with these elements:",elements)
     root = BinarySearchTreeNode(elements[0])
